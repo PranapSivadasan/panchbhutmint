@@ -1,12 +1,14 @@
 {
   "name": "panch-bhut-mint",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --port 4201",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "404": "cp ./docs/index.html ./docs/404.html",
+    "gensite": "ng build --output-path ./docs && npm run 404"
   },
   "private": true,
   "dependencies": {
@@ -18,6 +20,7 @@
     "@angular/platform-browser": "^14.2.0",
     "@angular/platform-browser-dynamic": "^14.2.0",
     "@angular/router": "^14.2.0",
+    "ethers": "^5.7.2",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
